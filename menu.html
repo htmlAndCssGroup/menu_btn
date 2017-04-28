@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="menu.css" type="text/css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			/*
+				$('.box').click(function(){
+					if($('#line1').hasClass('line1')) {
+						$('#line1').removeClass('line1').addClass('line1-reverse');
+						$('#line2').removeClass('line2').addClass('line2-reverse');
+						$('#line3').removeClass('line3').addClass('line3-reverse');
+					}else if($('#line1').hasClass('line1-reverse')) {
+						$('#line1').removeClass('line1-reverse').addClass('line1');
+						$('#line2').removeClass('line2-reverse').addClass('line2');
+						$('#line3').removeClass('line3-reverse').addClass('line3');
+					}else {
+						$('#line1').addClass('line1');
+						$('#line2').addClass('line2');
+						$('#line3').addClass('line3');
+					}
+				});
+				*/
+				
+				$('.box').bind('click', function(){
+					$(this).toggleClass('active');
+					$(this).find('div').removeClass('no-animation');
+				});
+			});
+			
+		</script>
+	</head>
+	<body>
+		<div>
+			<div class="square">
+				<div class="box">
+					<div id="line1" class="line1 no-animation"></div>
+					<div id="line2" class="line2 no-animation"></div>
+					<div id="line3" class="line3 no-animation"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
